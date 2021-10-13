@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="24dp"
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="860px"
         android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/huawei" />
+        app:srcCompat="@drawable/background" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/typeRecyclerView"
