@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp">
+
+    <ImageView
+        android:id="@+id/productItemImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="96dp"
+        app:srcCompat="@drawable/huawei" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/productItemName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/productItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAlignment="textStart"
+            android:textColor="#E4393C" />
+    </LinearLayout>
+
+</LinearLayout>
