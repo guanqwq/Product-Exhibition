@@ -33,7 +33,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             super(itemView);
 
             itemView.setOnClickListener(view -> {
-                int typeIndex = ((Activity) itemView.getContext()).getIntent().getIntExtra(MainActivity.MESSAGE, -1);
+                int typeIndex = ((Activity) itemView.getContext()).getIntent()
+                        .getIntExtra(MainActivity.MESSAGE, -1);
 
                 Intent intent = new Intent(itemView.getContext(), ThirdActivity.class);
                 intent.putExtra(MainActivity.MESSAGE, typeIndex);
