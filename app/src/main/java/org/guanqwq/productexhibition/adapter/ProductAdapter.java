@@ -20,6 +20,10 @@ import org.guanqwq.productexhibition.model.Product;
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
     private Product[] products;
 
+    /**
+     * Provide a reference to the type of views that you are using
+     * (custom ViewHolder).
+     */
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView icon;
         private final TextView name;
@@ -55,19 +59,28 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         }
     }
 
+    /**
+     * Initialize the dataset of the Adapter.
+     *
+     * @param products Product[] containing the data to populate views to be used
+     * by RecyclerView.
+     */
     public ProductAdapter(Product[] products) {
         this.products = products;
     }
 
+    // Create new views (invoked by the layout manager)
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.product_list_item, parent, false);
 
         return new ProductAdapter.ViewHolder(view);
     }
 
+    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.getIcon().setImageResource( products[position].getImgID() );
@@ -75,6 +88,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.getPrice().setText( String.format("¥ %.2f", products[position].getPrice()) );
     }
 
+    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return products.length;
