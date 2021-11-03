@@ -38,4 +38,6 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'com.ligux.lib.widget:exrecyclerview:1.0.0-beta1'
+
 }
