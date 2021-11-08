@@ -16,14 +16,30 @@
         android:layout_marginTop="24dp"
         app:srcCompat="@drawable/huawei" />
 
-    <TextView
-        android:id="@+id/detailsName"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        android:textColor="#000000"
-        android:textSize="34sp" />
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/detailsName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/starImage"
+            android:layout_width="75px"
+            android:layout_height="75px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bookmark_regular" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/detailsPrice"
@@ -32,7 +48,7 @@
         android:layout_marginTop="24dp"
         android:text="TextView"
         android:textColor="#e4393c"
-        android:textSize="24sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/detailsDescription"
@@ -40,5 +56,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="TextView"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 </LinearLayout>

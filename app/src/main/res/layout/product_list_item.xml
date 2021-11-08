@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="24dp">
@@ -27,7 +28,8 @@
             android:text="TextView"
             android:textAlignment="textStart"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="RtlCompat" />
 
         <TextView
             android:id="@+id/productItemPrice"
@@ -36,7 +38,8 @@
             android:gravity="center"
             android:text="TextView"
             android:textAlignment="textStart"
-            android:textColor="#E4393C" />
+            android:textColor="#E4393C"
+            tools:ignore="RtlCompat" />
     </LinearLayout>
 
 </LinearLayout>
