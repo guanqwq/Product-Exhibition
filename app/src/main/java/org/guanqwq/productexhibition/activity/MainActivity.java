@@ -3,7 +3,6 @@ package org.guanqwq.productexhibition.activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // Log.d(MESSAGE, "onResume()被触发");
         setCursorAdapter();
     }
 
@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 null,
                 null);
 
-        // RecyclerCursor适配器 - 收藏区
         RecyclerView collectRecyclerView = findViewById(R.id.collectRecyclerView);
         if (cursor.getCount() == 0) {
             collectRecyclerView.setVisibility(View.GONE);
@@ -61,9 +60,48 @@ public class MainActivity extends AppCompatActivity {
         } else {
             collectRecyclerView.setVisibility(View.VISIBLE);
             findViewById(R.id.textView2).setVisibility(View.VISIBLE);
+
+            // RecyclerCursor适配器 - 收藏区
             ProductCursorAdapter cursorAdapter = new ProductCursorAdapter(this, cursor, 0);
             collectRecyclerView.setLayoutManager(new LinearLayoutManager(this));
             collectRecyclerView.setAdapter(cursorAdapter);
         }
+
+        // CursorAdapter adapter = new SimpleCursorAdapter(this,
+        //         R.layout.product_list_item,
+        //         cursor,
+        //         new String[] {"name", "price", "imageRsID"},
+        //         new int[] {R.id.productItemName, R.id.productItemPrice, R.id.productItemImageView},
+        //         0);
     }
+
+    // @Override
+    // protected void onRestart() {
+    //     super.onRestart();
+    //     Log.d(MESSAGE, "onRestart()被触发");
+    // }
+    //
+    // @Override
+    // protected void onStart() {
+    //     super.onStart();
+    //     Log.d(MESSAGE, "onStart()被触发");
+    // }
+    //
+    // @Override
+    // protected void onStop() {
+    //     super.onStop();
+    //     Log.d(MESSAGE, "onStop()被触发");
+    // }
+    //
+    // @Override
+    // protected void onDestroy() {
+    //     super.onDestroy();
+    //     Log.d(MESSAGE, "onDestroy()被触发");
+    // }
+    //
+    // @Override
+    // protected void onPause() {
+    //     super.onPause();
+    //     Log.d(MESSAGE, "onPause()被触发");
+    // }
 }

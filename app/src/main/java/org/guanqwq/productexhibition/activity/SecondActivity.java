@@ -1,18 +1,17 @@
 package org.guanqwq.productexhibition.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.guanqwq.productexhibition.DataSource;
 import org.guanqwq.productexhibition.ProductDBHelper;
 import org.guanqwq.productexhibition.R;
 import org.guanqwq.productexhibition.adapter.ProductCursorAdapter;
-import org.guanqwq.productexhibition.model.Type;
 
 public class SecondActivity extends AppCompatActivity {
     public static final String MESSAGE =
